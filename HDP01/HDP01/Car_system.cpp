@@ -524,7 +524,7 @@ void checkUserKey(Car_system* data) {
 		long long Key_input = stoll(key_input);
 		if (Key_input == Key_from_car_list) {
 			isExisted = true;
-			Index = i; cout << Index << endl;
+			Index = i;
 			break;
 		}
 		else
@@ -535,10 +535,8 @@ void checkUserKey(Car_system* data) {
 	if (isExisted) {
 		cout << "This car already existed, data will be overwriten" << endl;
 		for (int i = Index; i < new_pos-1; i++) {
-			cout << i << endl;
 			car_list[i]->OverWrite(car_list[i + 1]);
 		}
-		cout << "1" << endl;
 		gCar = new Car_system;
 		--gNum_of_car;
 		system("pause");
